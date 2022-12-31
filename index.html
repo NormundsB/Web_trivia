@@ -7,7 +7,21 @@
     <link href="styles.css" rel="stylesheet">
     <title>Trivia!</title>
     <script>
-            // TODO: Add code to check answers to questions
+        // TODO: Add code to check answers to questions
+        document.addEventListener('DOMContentLoaded', function listen() {
+            console.log("Hi!");
+
+            let btnElements = document.querySelectorAll(".multiple");
+
+            for (let btnElement of btnElements) {
+                btnElement.addEventListener('click', event => multipleChoice(event));
+            }
+            function multipleChoice() {
+
+            }
+
+
+        });
     </script>
 </head>
 
@@ -20,8 +34,13 @@
         <div class="section">
             <h2>Part 1: Multiple Choice </h2>
             <hr>
-            <h3>Who found America?</h3>
-            <button class="button" onclick="checkAnswer('Christopher Columbus')">Christopher Columbus</button>
+            <h3>What is the approximate ratio of people to sheep in New Zeland?</h3>
+            <button class="multiple incorrect">3 person per 1 sheep</button>
+            <button class="multiple incorrect">1 person per 1 sheep</button>
+            <button class="multiple incorrect">6 person per 1 sheep</button>
+            <button class="multiple incorrect">1 person per 3 sheep</button>
+            <button class="multiple correct">1 person per 6 sheep</button>
+
             <!-- TODO: Add multiple choice question here -->
         </div>
 
